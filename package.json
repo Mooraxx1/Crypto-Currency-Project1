@@ -1,0 +1,27 @@
+{
+  "name": "day-29-crypto-website-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mooraxx1/Crypto-Currency-Project1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mooraxx1/Crypto-Currency-Project1/issues"
+  },
+  "homepage": "https://github.com/Mooraxx1/Crypto-Currency-Project1#readme",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "body-parser": "^2.2.2",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}
