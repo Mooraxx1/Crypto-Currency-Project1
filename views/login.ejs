@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+
+<section class="gridSection contactSection">
+    <div class="contactformContaier">
+        <h1 class="sectionHeader">Welcome <span class="cryptoText">Back</span></h1>
+        <p style="color: var(--darkText); margin-bottom: 2rem;">Sign in to manage your assets and track live markets.</p>
+        
+        <form action="/login" method="POST" class="contactForm">
+            <div class="login-field-group">
+                <input type="email" name="username" placeholder="Email Address" class="contactInput" required>
+            </div>
+            
+            <div class="login-field-group">
+                <input type="password" name="password" placeholder="Password" class="contactInput" required>
+            </div>
+
+            <button type="submit" class="btn primaryBtn contactBtn">Sign In</button>
+        </form>
+
+        <p style="margin-top: 2rem; color: var(--white);">
+            New here? <a href="/contact" style="color: var(--primarycolor); font-weight: bold;">Create an account</a>
+        </p>
+    </div>
+
+    <div class="sectionPic bouncepic contactPic" id="sectionPic">
+        <img src="/img/contact-img.png" alt="Login to Crypto">
+    </div>
+</section>
+
+<div class="address" style="margin-top: 5em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3em;">
+    <div class="eachAdress">
+        <h1 style="color: var(--primarycolor);">Secure</h1>
+        <p>Your data is encrypted with industry-standard protocols.</p>
+    </div>
+    <div class="eachAdress">
+        <h1 style="color: var(--primarycolor);">Live</h1>
+        <p>Access real-time pricing and market trends instantly.</p>
+    </div>
+    <div class="eachAdress">
+        <h1 style="color: var(--primarycolor);">Support</h1>
+        <p>24/7 technical assistance for all registered users.</p>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

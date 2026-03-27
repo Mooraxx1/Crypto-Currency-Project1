@@ -806,3 +806,185 @@ footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+
+
+/* extras live and login */
+/* extra live  */
+/* --- New Header Additions --- */
+
+/* Style for the Live Tracker link to add a green "Live" dot */
+.nav-link a[href="/live"]::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71; /* Green for Live */
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    animation: pulse 1.5s infinite;
+}
+
+/* Style for the Login link to make it look like a button */
+.nav-login a {
+    background-color: var(--primarycolor);
+    padding: 0.5em 1.5em;
+    border-radius: 50px; /* Matching your newsletter button style */
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-login a:hover {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    box-shadow: 0px 0px 10px rgba(61, 81, 242, 0.5);
+}
+
+/* Animation for the "Live" green dot */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(46, 204, 113, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
+}
+
+/* Mobile adjustments for the Login button */
+@media screen and (max-width: 799px) {
+    .nav-login {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .nav-login a {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Desktop specific fixes for width and button spacing */
+@media screen and (min-width: 800px) {
+    .nav {
+        max-width: 800px;
+        display: flex; /* Force flex for alignment */
+        align-items: center; /* Vertically center everything in the row */
+        height: 100%;
+    }
+
+    .nav-link {
+        margin-right: 2em;
+        display: flex;
+        align-items: center; /* Centers text links */
+    }
+
+    .nav-link.nav-login {
+        margin-right: 0; 
+        margin-left: 10px; /* Space from Contact */
+    }
+
+    .nav-login a {
+        padding: 0.8em 2em;
+        line-height: 1; /* Prevents text from pushing the button taller */
+        display: inline-block;
+        margin-top: 0; /* Resetting previous lift */
+    }
+}
+
+/* extra live and login pages */
+/* Live Tracker Styles */
+.table-container {
+    overflow-x: auto;
+    margin-top: 2em;
+    background: var(--lightgrey);
+    padding: 1.5em;
+    border-radius: 20px;
+}
+
+.crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--darkblue);
+    text-align: left;
+}
+
+.crypto-table th {
+    padding: 1em;
+    border-bottom: 2px solid var(--primarycolor);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.crypto-table td {
+    padding: 1.2em 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-icon {
+    width: 35px;
+}
+
+.price-cell {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+/* Login Page Styles */
+
+/* --- Unified Login Styles --- */
+
+/* Resetting the form inside login to stack vertically instead of the 2-column contact look */
+.contactformContaier .contactForm .login-field-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Ensure the inputs in the login form take full width */
+.contactformContaier .contactForm .login-field-group .contactInput {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+/* Optional: Add a subtle glow to the login section to keep that 'Neon' feel */
+.contactSection {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Highlighting the 'Back' text in the header */
+.sectionHeader .cryptoText {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+    font-size: 1.2em;
+}
+
+/* Button spacing adjustment */
+.contactBtn {
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+    box-shadow: 0px 0px 20px var(--primarycolor);
+    transform: translateY(-2px);
+}
+
+/* Responsive fix for smaller screens */
+@media screen and (max-width: 800px) {
+    .contactformContaier {
+        text-align: center;
+    }
+    
+    .contactForm .login-field-group .contactInput {
+        text-align: center;
+    }
+}

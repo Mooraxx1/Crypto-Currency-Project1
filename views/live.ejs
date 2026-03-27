@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+
+<main class="container">
+    <section class="live-section">
+        <h1 class="headline">Market <span class="cryptoText">Live Tracker</span></h1>
+        
+        <p>Top 3 Currencies - Last Updated: <span id="last-updated"><%= date %></span></p>
+
+        <div class="table-container">
+            <table class="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Icon</th>
+                        <th>Name</th>
+                        <th>Price (USD)</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/img/bitcoin-icon.png" alt="BTC" class="table-icon"></td>
+                        <td>Bitcoin (BTC)</td>
+                        <td class="price-cell">$<%= btcPrice %></td>
+                        <td><%= date %></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/ethereum-icon.png" alt="ETH" class="table-icon"></td>
+                        <td>Ethereum (ETH)</td>
+                        <td class="price-cell">$<%= ethPrice %></td>
+                        <td><%= date %></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/tether-icon.png" alt="USDT" class="table-icon"></td>
+                        <td>Tether (USDT)</td>
+                        <td class="price-cell">$<%= usdtPrice %></td>
+                        <td><%= date %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<%- include("partials/footer") %>
